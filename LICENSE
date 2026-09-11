@@ -1,0 +1,13 @@
+# interlinear-data
+
+This repository's compiled JSON is licensed [CC BY 4.0](http://creativecommons.org/licenses/by/4.0/).
+
+It merges and reformats the following sources; attribution for each belongs
+to its own creator, per its own license, not to this repo:
+
+- [MACULA Greek Linguistic Datasets](https://github.com/Clear-Bible/macula-greek) © Biblica, Inc — CC BY 4.0
+- [openscriptures/strongs](https://github.com/openscriptures/strongs) — Copyright 2009-2010, Open Scriptures — CC BY-SA
+- [openscriptures/HebrewLexicon](https://github.com/openscriptures/HebrewLexicon) (Brown-Driver-Briggs, 1906) — public domain
+- [translatable-exegetical-tools/Abbott-Smith](https://github.com/translatable-exegetical-tools/Abbott-Smith) (1922) — public domain
+
+See README.md for which file uses which source.
