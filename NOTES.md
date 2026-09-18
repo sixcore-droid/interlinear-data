@@ -28,3 +28,12 @@ did not exist in this environment as of 2026-09-18.)
   Easton's headword at all, a son of Shaharaim in Benjamin's genealogy, born in Moab from
   his wife Hodesh. A future run rewriting H4852 and H4331 needs to write H4852 as the
   Arabian place and H4331 as this separate Benjamite, not reuse the Caleb/Moab-king text.
+- 2026-09-18: ISBE (internationalstandardbible.com) is still blocked in this environment
+  (proxy `recentRelayFailures` shows `connect_rejected`, gateway 403 on CONNECT), same as
+  the prior run's note above; place/group-flavored entries this run again fell back to
+  general knowledge instead of the real ISBE text.
+- 2026-09-18: entity named "Adronicus" (strong G408, canonical Romans 16:7) is very likely
+  a misspelling of "Andronicus" in the source data (the Jewish Christian Paul greets in
+  Rom. 16:7 alongside Junia). The dictNote was written describing Andronicus correctly,
+  but the `name` field itself probably needs a source-data fix, same pattern as
+  Azorigin/Onespiphorus/Dinhaban noted above.
