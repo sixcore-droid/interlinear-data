@@ -20,3 +20,11 @@ did not exist in this environment as of 2026-09-18.)
   1 Chronicles 1:43) is very likely a misspelling of "Dinhabah" in the source data (the
   capital city of Bela son of Beor, Edom's first king). Content was written to describe
   Dinhabah correctly; the `name` field may need a source-data fix.
+- 2026-09-18: the name "Mesha" has FOUR separate records in entities.json, all sharing
+  Easton's one 3-sense headword text before this run: H4852 (Genesis 10:30, a place in
+  Arabia), H4337 (1 Chronicles 2:42, Caleb's eldest son) and H4338 (2 Kings 3:4, the king
+  of Moab of the Moabite Stone) match Easton's three senses and were rewritten correctly
+  this run. But H4331 (1 Chronicles 8:9) is a FOURTH, distinct Mesha not covered by
+  Easton's headword at all, a son of Shaharaim in Benjamin's genealogy, born in Moab from
+  his wife Hodesh. A future run rewriting H4852 and H4331 needs to write H4852 as the
+  Arabian place and H4331 as this separate Benjamite, not reuse the Caleb/Moab-king text.
