@@ -37,3 +37,12 @@ did not exist in this environment as of 2026-09-18.)
   Rom. 16:7 alongside Junia). The dictNote was written describing Andronicus correctly,
   but the `name` field itself probably needs a source-data fix, same pattern as
   Azorigin/Onespiphorus/Dinhaban noted above.
+- 2026-09-18: entity named "Nakbi" (strong H5147, canonical Numbers 13:14) is very likely
+  a misspelling of "Nahbi" in the source data (the Naphtalite spy, son of Vophsi, sent by
+  Moses to scout Canaan). The dictNote was written describing Nahbi correctly, but the
+  `name` field itself probably needs a source-data fix, same pattern as
+  Azorigin/Onespiphorus/Dinhaban/Adronicus noted above.
+- 2026-09-18: ISBE (internationalstandardbible.com) is still blocked in this environment
+  (curl to internationalstandardbible.com times out / connection reset through the proxy),
+  same as prior runs' notes above; this run stayed in the person tier so it didn't need
+  ISBE, but worth re-checking connectivity before a future place/group-tier run.
