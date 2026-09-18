@@ -12,3 +12,11 @@ did not exist in this environment as of 2026-09-18.)
   be a data artifact, the actual biblical name is "Azor" (an ancestor of Jesus in
   Matthew's genealogy). The dictNote was written describing Azor correctly, but the
   `name` field itself looks wrong and probably needs a source-data fix, not a content fix.
+- 2026-09-18: entity named "Onespiphorus" (strong G3683, canonical 2 Timothy 1:16, 4:19)
+  looks like the same kind of data artifact as Azorigin above, the actual biblical name
+  is "Onesiphorus". The dictNote was written describing Onesiphorus correctly, but the
+  `name` field itself likely needs a source-data fix.
+- 2026-09-18: entity named "Dinhaban" (strong H1838, canonical Genesis 36:32,
+  1 Chronicles 1:43) is very likely a misspelling of "Dinhabah" in the source data (the
+  capital city of Bela son of Beor, Edom's first king). Content was written to describe
+  Dinhabah correctly; the `name` field may need a source-data fix.
