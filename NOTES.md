@@ -1,5 +1,28 @@
 # Saved-up questions
 
+- 2026-09-19: ninth place-tier batch (50 entities, all tied at a single canonical
+  reference each, since the place pool is now entirely down to single-verse
+  entries); 224 not-yet-rewritten place records remain. ISBE
+  (internationalstandardbible.com) is still blocked via curl in this environment
+  (gateway answers 403 to CONNECT), consistent with every prior run, so this batch
+  again used general knowledge, dictSource "study-bible (ACAI + Tyndale)"
+  throughout, with real archaeology/extrabiblical corroboration folded in where
+  genuinely established (the Lysanias-the-tetrarch inscription near Abila
+  confirming Luke 3:1, the Ahiram sarcophagus and Amarna letters for Gebal/Byblos,
+  the Deir Alla "Balaam son of Beor" plaster inscription and the Assyrian
+  attestation of Pitru for Pethor, the Tiglath-pileser III conquest record for
+  Kullani/Canneh, Tel Aphek's excavated strata for Antipatris, and the excavated
+  Roman lighthouse for Patara). Two canonical-reference mismatches found, not
+  corrected here, only flagged: "Mearah" (strong H4632) carries the canonical ref
+  Isaiah 32:14, but that verse only uses the same Hebrew word as a common noun
+  ("den"/"cave"); the actual place Mearah is named at Joshua 13:4, near Sidon, and
+  the new dictNote describes that place while the canonical field is probably
+  wrong. Similarly "Avim" (strong H5761) carries the canonical ref Joshua 18:23,
+  a Benjamite town, but Easton's old dictNote text described the unrelated
+  coastal Avvite people of Deut. 2:23; the new dictNote covers the actual town at
+  Josh. 18:23 and notes the two are different, but the underlying strong-number
+  tagging may deserve a look. Same pattern as the Japha/Mesha/Urbanus notes
+  below, where a name or kind tag didn't match its own cited verse.
 - 2026-09-19: eighth place-tier batch (55 entities, sorted by canonical-ref count
   descending); the pool is now entirely down to entries with a single canonical
   reference each (274 not-yet-rewritten place records remain after this run). ISBE
