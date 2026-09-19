@@ -1,5 +1,28 @@
 # Saved-up questions
 
+- 2026-09-19: eleventh place-tier batch (55 entities, all single-canonical-ref; 114
+  not-yet-rewritten place records remain). ISBE (internationalstandardbible.com) is
+  still blocked (agent-proxy status confirms a 403 policy denial on the CONNECT to
+  that host), consistent with every prior run, so this batch again used general
+  knowledge, dictSource "study-bible (ACAI + Tyndale)" throughout, with real
+  corroboration folded in where genuinely established: the Amarna letters naming
+  Hinnatuna/Hannathon as a contested Galilee garrison town centuries before Joshua,
+  Tiglath-pileser III's own annals recording the Assyrian conquest of Abel-maim
+  (Abel-beth-maachah), the excavated Iron Age royal compound and lmlk-stamped jar
+  handles at Ramat Rahel proposed as Beth-haccerem, the Naville excavation of
+  store-chamber ruins at Tell el-Maskhuta long identified with Pithom (noting the
+  competing Tell er-Retabeh identification rather than overclaiming), and the
+  scholarly identification of Koa with the well-attested Mesopotamian region of
+  Gutium. One duplicate-record fix: "Addar" (H146, 1 Chr. 8:3, kind=="place") is
+  not a place at all but the same person already covered under "Ard" (H714, Bela's
+  son); rewritten to say so plainly rather than invent a fake location, the mirror
+  image of the recurring place/deity-tagged-as-person pattern flagged in earlier
+  batches. One textual crux flagged rather than silently resolved: "Ummah" (Josh.
+  19:30, Asher) is widely read as "Acco" by scholars following the LXX, since Acco
+  is otherwise absent from Asher's town list despite Judg. 1:31 placing it in
+  Asher's territory; noted in the dictNote itself rather than picked as fact.
+  This file lives at the repo root because no jayms-post-build skill path exists
+  in this container; a future run should check both locations.
 - 2026-09-19: tenth place-tier batch (55 entities, pool now entirely single-canonical-ref,
   so no further ref-count sort was meaningful; 169 not-yet-rewritten place records remain).
   ISBE still blocked via curl in this environment (TLS connect failure, exit 56), consistent
