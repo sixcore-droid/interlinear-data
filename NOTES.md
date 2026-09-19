@@ -1,5 +1,31 @@
 # Saved-up questions
 
+- 2026-09-19: fifth place-tier batch (50 entities, sorted by canonical-ref count
+  descending, now down to entries with 3-4 canonical refs); 487 not-yet-rewritten
+  place records remain. ISBE (internationalstandardbible.com) is still blocked via
+  curl in this environment (gateway answers 403 to CONNECT), consistent with every
+  prior run, but WebSearch was not blocked and did surface real ISBE-derived facts
+  and other real archaeology/extrabiblical corroboration indirectly (Amarna-letters
+  gate-of-Joppa mention, the Mesha/Moabite Stone's own claim to have rebuilt
+  Baal-meon, Tiglath-pileser III's summary inscriptions listing the conquest of
+  Ijon and Abel-beth-maacah matching 2 Kings 15:29, Thutmose III's Karnak
+  topographical list naming Achshaph, the 1956 Kerti Höyük inscription that fixed
+  Derbe's location, Sargon II's Khorsabad inscription on the Samaria deportation
+  underlying Halah, and the Sabaean-inscription identification of Raamah with
+  Ragmatum in Yemen), so dictSource is still "study-bible (ACAI + Tyndale)"
+  rather than a real ISBE-text citation. Two data-integrity findings from this
+  batch: the entity named "Japha" (strong H3305, refs Josh. 19:46, 2 Chr. 2:16,
+  Ezra 3:7, Jonah 1:3) is really Japho, the Hebrew name for Joppa; its `name`
+  field looks like a corrupted/misspelled transliteration and probably needs a
+  source-data fix to "Japho" (or "Joppa"), same pattern as the Azorigin/
+  Onesiphorus/Dinhaban/Adronicus/Nakbi/Gath-rimmon/Daniel notes above. Separately,
+  "Phenice" strong G5403 (refs Acts 11:19, 15:3, 21:2, all KJV "Phenice" =
+  Phoenicia the coastal region) had carried Easton's text about a *different*
+  place, the harbor called Phoenix on Crete's south coast (Acts 27:12), which is
+  a distinct entity in this dataset under strong G5405 and still not rewritten;
+  this run's new dictNote for G5403 correctly describes Phoenicia and flags the
+  distinction so a future run isolates G5405 as its own short Phoenix-harbor entry.
+
 Notes appended by automated entity-rewrite runs when something needs a human decision.
 (Path chosen because `~/.claude/skills/jayms-post-build/references/JAYMS-entity-explorer-todo.md`
 did not exist in this environment as of 2026-09-18.)
