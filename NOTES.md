@@ -86,3 +86,28 @@ did not exist in this environment as of 2026-09-18.)
   ISBE (internationalstandardbible.com) was still blocked in this environment when
   checked at the start of this run (proxy connect_rejected), consistent with every prior
   run's note above; worth re-checking again before the place-tier work begins.
+- 2026-09-19: third place-tier batch (55 more entities, sorted by canonical-ref count
+  descending); 587 not-yet-rewritten place records remain. ISBE direct fetch (curl and
+  WebFetch) was still blocked this run, but WebSearch could still surface real facts
+  about ISBE-indexed pages indirectly, so this run used WebSearch to verify several
+  genuine archaeology/history facts (Lachish ostraca and Azekah, the Erastus and Lystra
+  Zeus/Hermes inscriptions, Woolley's royal cemetery at Ur, the Bethsaida et-Tell/el-Araj
+  debate, Laodicea's lukewarm aqueduct system, Tel Dor's Phoenician sequence) even though
+  it never got real ISBE article text itself, so dictSource is still "study-bible (ACAI +
+  Tyndale)" for all 55, not the ISBE citation. Two content-level findings worth flagging:
+  "Lasharon" (H8289, Joshua 12:18) turned out to share its Strong's number with six other
+  references that are actually the well-known Sharon coastal plain (1 Chr. 5:16, 27:29;
+  Song 2:1; Isa. 33:9, 35:2, 65:10), not a separate obscure Canaanite town, so the record
+  was rewritten to describe Sharon itself, with Lasharon noted as its Joshua 12:18 form;
+  a future run could consider whether the `name` field should really be "Sharon."
+  "Asharoth" (H6252) had a null dictNote and looks like a source-data misspelling of
+  "Ashtaroth" (Og of Bashan's capital); content was written describing Ashtaroth
+  correctly, but the `name` field may need a source-data fix, same pattern as
+  Azorigin/Onespiphorus/Dinhaban/Adronicus/Nakbi noted above. Also caught two records
+  whose canonical refs mix a place with an unrelated same-headword person genealogy
+  that a plain read of the old dictNote would have missed: "Gedor" (H1446) also names a
+  man in Benjamin's genealogy tied to Saul's family (1 Chr. 8:31, 9:37), not just the two
+  Judah-area towns Easton's headword covered; "Shimron" (H8110) is both a Canaanite city
+  in Zebulun (Josh. 11:1-2, 19:15) and, unrelated in origin, a son of Issachar who named
+  the Shimronite clan (Gen. 46:13; Num. 26:24; 1 Chr. 7:1). Both were rewritten to cover
+  both senses.
