@@ -1,5 +1,28 @@
 # Saved-up questions
 
+- 2026-09-19: twelfth place-tier batch (50 entities, pool entirely single-canonical-ref
+  since the tenth batch; 64 not-yet-rewritten place records remain). ISBE
+  (internationalstandardbible.com) is still blocked via curl and WebFetch in this
+  environment (agent-proxy status confirms a 403 policy denial / EGRESS_BLOCKED on
+  that host), consistent with every prior run, so this batch again used general
+  knowledge, dictSource "study-bible (ACAI + Tyndale)" throughout; WebSearch was not
+  blocked and was used to spot-check the least-certain facts before writing them
+  (the Great Isaiah Scroll's "Syene" reading for Sinim at Isa. 49:12, Strabo's
+  testimony that the Persian kings favored Chalybon/Helbon wine, the 2011 discovery
+  of a probable martyrium over the apostle Philip's tomb at Hierapolis, and the
+  three-year siege of Sharuhen recorded in the tomb autobiography of Ahmose son of
+  Ebana), all confirmed rather than assumed. Two data-quality issues found and
+  handled in the dictNote text itself rather than corrected in the data: "Allon"
+  (H438, 1 Chr. 4:37) carries kind=="place" but its own canonical reference is
+  actually a Simeonite genealogical entry, not a location (Easton's headword covers
+  both an oak-tree landmark and this person under one entry); and "Helbah" (H2463,
+  Ezek. 27:18) has a canonical reference that describes Helbon, a wine-trading town
+  near Damascus, not Helbah of Asher (the place its duplicate-name sibling H2462,
+  Judg. 1:31, correctly refers to) - the dictNote for H2463 was written about
+  Helbon and flags the mismatch inline. Several other entries in this batch are
+  genealogical place-as-person names from 1 Chronicles 2 (Beth-gader, Machbenah,
+  Jorkeam), written to explain that Chronicles convention rather than invent
+  biographies for them.
 - 2026-09-19: eleventh place-tier batch (55 entities, all single-canonical-ref; 114
   not-yet-rewritten place records remain). ISBE (internationalstandardbible.com) is
   still blocked (agent-proxy status confirms a 403 policy denial on the CONNECT to
