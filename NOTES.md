@@ -4,6 +4,34 @@ Notes appended by automated entity-rewrite runs when something needs a human dec
 (Path chosen because `~/.claude/skills/jayms-post-build/references/JAYMS-entity-explorer-todo.md`
 did not exist in this environment as of 2026-09-18.)
 
+- 2026-09-19: first place-tier batch (55 entities, sorted by canonical-ref count
+  descending) is rewritten; person tier is fully done (0 not-yet-rewritten records
+  left) so the pool has moved to kind=="place" (692 remaining after this run).
+  ISBE (internationalstandardbible.com) was still blocked via curl and WebFetch this
+  run (egress proxy returns connect_rejected/EGRESS_BLOCKED), consistent with every
+  prior run's note above, so these place entries are general-knowledge (dictSource
+  "study-bible (ACAI + Tyndale)"), not real ISBE text; WebSearch could still surface
+  short real ISBE snippets indirectly (the search API isn't blocked even though the
+  domain fetch is), which is worth trying more deliberately in a future run.
+- 2026-09-19: found a real data-integrity bug, not just an obscure name: the record
+  named "Daniel" with strong H1835 (kind="place", 32 canonical refs from Genesis
+  through 1 Kings) is mislabeled. H1835 is the Hebrew word for "Dan" (Jacob's son /
+  his tribe / the city of Dan, "from Dan to Beersheba"), not Daniel the prophet
+  (whose correct records are H1840 and H1841/G1158, both already curated separately).
+  Its canonical refs (Gen. 30:6, 49:16-17, Judg. 18:29, etc.) confirm this is really
+  about Dan. The dictNote was rewritten to correctly describe Dan and flags the
+  mismatch inline, but the `name` field itself needs a source-data fix from "Daniel"
+  to "Dan", same pattern as the Azorigin/Onespiphorus/Dinhaban/Adronicus/Nakbi notes
+  above.
+- 2026-09-19: two duplicate-headword pairs noticed this run, left for a future run
+  since they weren't in this batch's top-55 slice (each has few canonical refs):
+  "Hebron" strong H5683 (1 ref, Josh. 19:28) still carries the old duplicated Easton
+  text for the whole Hebron headword; it should be rewritten as just the minor town
+  on Asher's border, not the city of Hebron (already correctly rewritten under
+  H2275 this run). Likewise "Jeshua" strong H3443 (kind="unknown", 1 ref) still
+  carries the same duplicated Easton text as H3442 (rewritten this run); it should
+  get its own short, non-duplicate entry once its specific canonical ref is checked.
+
 - 2026-09-18: ISBE (internationalstandardbible.com) is blocked by this environment's
   egress/org policy (proxy returns `connect_rejected` / 403 on CONNECT), so place/group
   entries this run had to fall back to general knowledge instead of the real ISBE text.
