@@ -4,6 +4,20 @@ Notes appended by automated entity-rewrite runs when something needs a human dec
 (Path chosen because `~/.claude/skills/jayms-post-build/references/JAYMS-entity-explorer-todo.md`
 did not exist in this environment as of 2026-09-18.)
 
+- 2026-09-19: fourth place-tier batch (50 entities, sorted by canonical-ref count
+  descending); 537 not-yet-rewritten place records remain. ISBE
+  (internationalstandardbible.com) is still blocked via curl in this environment
+  (connect_rejected through the egress proxy), so this run again used general
+  knowledge, dictSource "study-bible (ACAI + Tyndale)" throughout. Two data-artifact
+  findings worth flagging: the entity literally named "Gath-rimmon. d" (strong
+  H1667) has a corrupted `name` field with a stray ". d" suffix, same pattern as the
+  Azorigin/Onespiphorus/Dinhaban/Adronicus/Nakbi notes above, it should just be
+  "Gath-rimmon"; and several entities tagged kind=="place" turned out on inspection
+  to have zero canonical refs actually describing a place at all, only people who
+  share the headword (Shema H8087, Mikloth H4732, Zophai H6689 all rewritten this
+  run as person entries despite their place tag, since every one of their canonical
+  refs points to a person, not a location). Shema H8090 (Josh. 15:26, the actual
+  town) is a separate untouched record for a future run.
 - 2026-09-19: first place-tier batch (55 entities, sorted by canonical-ref count
   descending) is rewritten; person tier is fully done (0 not-yet-rewritten records
   left) so the pool has moved to kind=="place" (692 remaining after this run).
