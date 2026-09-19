@@ -46,3 +46,15 @@ did not exist in this environment as of 2026-09-18.)
   (curl to internationalstandardbible.com times out / connection reset through the proxy),
   same as prior runs' notes above; this run stayed in the person tier so it didn't need
   ISBE, but worth re-checking connectivity before a future place/group-tier run.
+- 2026-09-19: rewrote the last 30 person-tier entities (all single-canonical-ref names),
+  which brings kind=="person" curated==false to zero not-yet-rewritten records; the
+  rewrite pool now moves to kind=="place" (747 remaining) next run. Caught several more
+  misclassified entries tagged as person that are actually a gentilic/clan name (Isri,
+  the Jezerite family of Naphtali, Num. 26:49), a gate name (Sur, 2 Kings 11:6), a trade
+  commodity (Pannag, Ezek. 27:17), a tribal group (Nodab, 1 Chr. 5:19; Leummim, Gen. 25:3),
+  and a symbolic place name (Hamonah, Ezek. 39:16). Also isolated the Antipas record
+  (G493, Rev. 2:13 only) to the martyr of Pergamum, not Herod Antipas, since the "Herod"
+  entity (G2264) already covers Herod Antipas under its own canonical refs.
+  ISBE (internationalstandardbible.com) was still blocked in this environment when
+  checked at the start of this run (proxy connect_rejected), consistent with every prior
+  run's note above; worth re-checking again before the place-tier work begins.
