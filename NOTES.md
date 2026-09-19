@@ -1,5 +1,28 @@
 # Saved-up questions
 
+- 2026-09-19: eighth place-tier batch (55 entities, sorted by canonical-ref count
+  descending); the pool is now entirely down to entries with a single canonical
+  reference each (274 not-yet-rewritten place records remain after this run). ISBE
+  (internationalstandardbible.com) is still blocked via curl in this environment
+  (connect_rejected through the egress proxy), consistent with every prior run, so
+  this batch used general knowledge plus a few genuine archaeology/extrabiblical
+  corroborations already well established (the Moabite Stone's mention of
+  Baal-meon for Beon, the Ahmose-era Egyptian siege of Sharuhen, the Tel Moza
+  Iron Age temple excavation for Mozah, the Kiriath-jearim/Tell Deir el-Azhar
+  platform for Baale of Judah, Carthage's tophet precincts for Tophet), dictSource
+  "study-bible (ACAI + Tyndale)" throughout. Two mistagged-kind findings: "Mesha"
+  (strong H4331, 1 Chr. 8:9) is actually a Benjamite man, son of Shaharaim, not a
+  place, distinct from the Arabian place Mesha (H4852, Gen. 10:30, also in this
+  batch) and the Moabite king Mesha (H4338, already rewritten as a person); and
+  "Urbanus" (strong G3773, Rom. 16:9) is actually a person, Paul's fellow worker
+  greeted alongside Stachys, not a place, despite both carrying kind=="place" in
+  this dataset. Both were rewritten to describe what they actually are rather than
+  invented as fake locations, per the established pattern for this kind of error.
+  Two likely name-spelling data issues, not corrected here, only flagged: "En-hakhore"
+  (strong H5875, Judg. 15:19) is spelled "Enhakkore" in the KJV; "Bene-barak"
+  (strong H1139, Josh. 19:45) is spelled "Beneberak" in the KJV. Neither looks like
+  a transliteration choice so much as a possible transcription slip in the source
+  data, same pattern as the Gath-rimmon/Japha/Azorigin notes below.
 - 2026-09-19: fifth place-tier batch (50 entities, sorted by canonical-ref count
   descending, now down to entries with 3-4 canonical refs); 487 not-yet-rewritten
   place records remain. ISBE (internationalstandardbible.com) is still blocked via
