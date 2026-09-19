@@ -1,5 +1,34 @@
 # Saved-up questions
 
+- 2026-09-19: third and final group-tier batch (all 77 remaining not-yet-rewritten group
+  records, all single-canonical-ref); the group tier is now fully complete, 0
+  not-yet-rewritten records left in kind=="person", kind=="place", or kind=="group". Only
+  kind=="unknown" (10 remaining, not part of this task's scope) still has un-rewritten
+  records; a future run may want clarification on whether that tier should be included.
+  ISBE (internationalstandardbible.com) was checked again at the start of this run via
+  curl and is still blocked (connection reset through the proxy), consistent with every
+  prior run's note, so this batch used general knowledge throughout; dictSource is
+  "study-bible (ACAI + Tyndale)" for all 77. Almost the entire remaining pool was
+  wilderness-census clan names from Numbers 26 (patronymic families named for a son or
+  grandson of one of the twelve tribal patriarchs) plus a handful of "resident of X"
+  epithets for David's mighty men and a few nation/ethnonym terms (Samaritans, Sabeans,
+  Dedanites, Parthians, etc.), so most entries are short, 1-2 sentences. Two records
+  worth flagging: "Baharumite" (H978, 1 Chr. 11:33) and "Barhumite" (H1273, 2 Sam.
+  23:31) are two separate site records for the very same man (Azmaveth of Bahurim) under
+  variant spellings from the parallel mighty-men lists, both now rewritten to note the
+  connection; and "Jezerite" (H373, Num. 26:30) turned out to be Gideon's own clan, the
+  Abiezrites of Gilead within Manasseh, distinct from the unrelated "Jezerites" (H3340,
+  1 Chr. 25:11), which actually names a division of Asaph's Levitical singers, not a
+  genealogical clan at all; both were kept as separate, distinctly worded records. Also
+  caught one mistagged entry: "Ophni" (H6078, Josh. 18:24) is tagged kind=="group" but is
+  actually a town of Benjamin, not a clan or people group; the dictNote was written to
+  say so honestly rather than inventing a fake gentilic sense. Real archaeology folded in
+  where genuine: the Code of Hammurabi stele found at Susa (Susanchites), the excavated
+  Dedanite/Lihyanite inscriptions at al-Ula in Arabia (Dedanim), and the 2010s Philistine
+  cemetery excavation at Ashkelon (Eshkalonites). Path note for future runs: no
+  jayms-post-build skill directory exists in this environment, so these notes go in
+  NOTES.md at the repo root, as prior runs have done.
+
 - 2026-09-19: second group-tier batch (55 more not-yet-rewritten group/gentilic records,
   sorted by canonical-ref count descending); 77 not-yet-rewritten group records remain
   after this run. ISBE (internationalstandardbible.com) is still blocked in this
