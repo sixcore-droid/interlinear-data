@@ -1,5 +1,21 @@
 # Saved-up questions
 
+- 2026-09-19: tenth place-tier batch (55 entities, pool now entirely single-canonical-ref,
+  so no further ref-count sort was meaningful; 169 not-yet-rewritten place records remain).
+  ISBE still blocked via curl in this environment (TLS connect failure, exit 56), consistent
+  with every prior run, so this batch used general knowledge, dictSource
+  "study-bible (ACAI + Tyndale)" throughout, with real corroboration folded in for Gaza
+  (Amarna letters), Erech/Uruk (excavated temple precincts, origin of cuneiform), and Hara
+  (Tiglath-pileser III's annals recording the Transjordan deportations). One content-error
+  correction, not just a flag: "Iron" (H3375, Josh. 19:38) had a dictNote entirely about the
+  metal iron rather than the Naphtali town of that name; rewritten to describe the actual
+  place. Two textually uncertain entries flagged rather than resolved: "Dan also" (H2051,
+  Ezek. 27:19), where the Masoretic text is difficult and some scholars read "Vedan" (an
+  Arabian place) instead of the tribe/territory of Dan, a genuine textual-critical question a
+  human editor may want to weigh in on rather than have silently picked one reading; and
+  "Bamah" (H1117, Ezek. 20:29), which is a prophetic wordplay on the generic term "high
+  place" rather than a normal toponym, kept as a place entry since the verse itself treats it
+  as a name but worth a second look if the kind taxonomy ever gets more granular.
 - 2026-09-19: ninth place-tier batch (50 entities, all tied at a single canonical
   reference each, since the place pool is now entirely down to single-verse
   entries); 224 not-yet-rewritten place records remain. ISBE
