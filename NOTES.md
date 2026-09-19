@@ -1,5 +1,23 @@
 # Saved-up questions
 
+- 2026-09-19 (later, ~19:30 run): found that every run since 2026-09-18 06:21 (15
+  scheduled firings, 41 commits, the full place-tier and group-tier rewrite) had been
+  committing successfully in this working directory but landing on a DETACHED HEAD
+  rather than the `main` branch, so `git push origin main` was pushing the unmoved local
+  `main` ref (a no-op that still exits 0 and prints success) instead of the new commits.
+  origin/main was still sitting at 17d81f6 (2026-09-18 00:56) while local history had
+  raced 30+ hours ahead; production (jayms.com) had not received any place- or
+  group-tier rewrite the whole time. Recovered by branching the detached tip
+  (`recovered-work` at 1a73640), fast-forwarding local `main` onto it, confirming HEAD
+  was attached to `refs/heads/main` afterward, and pushing for real; origin/main now
+  matches local at 1a73640 and entities.json is confirmed valid JSON with 3026 records.
+  Root cause of how HEAD got detached in the first place is still unknown (possibly a
+  `git checkout <sha>` in an earlier run, e.g. to inspect a specific commit, that was
+  never followed by `git checkout main`); future runs should verify `git symbolic-ref -q
+  HEAD` succeeds (prints `refs/heads/main`) before committing, and should not trust a
+  clean `git push` exit code alone as proof the push actually moved origin/main, check
+  `git rev-parse HEAD origin/main` match afterward instead.
+
 - 2026-09-19: third and final group-tier batch (all 77 remaining not-yet-rewritten group
   records, all single-canonical-ref); the group tier is now fully complete, 0
   not-yet-rewritten records left in kind=="person", kind=="place", or kind=="group". Only
