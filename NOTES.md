@@ -1,5 +1,26 @@
 # Saved-up questions
 
+- 2026-09-19: second group-tier batch (55 more not-yet-rewritten group/gentilic records,
+  sorted by canonical-ref count descending); 77 not-yet-rewritten group records remain
+  after this run. ISBE (internationalstandardbible.com) is still blocked in this
+  environment; this run's WebFetch attempt returned an explicit EGRESS_BLOCKED error from
+  the network proxy for that domain (not just a curl timeout), confirming it is a
+  deliberate proxy policy block rather than a flaky connection, consistent with every
+  prior run's note. WebSearch was used once to verify the Kurkh Monolith / battle of
+  Qarqar fact (Hamath's king Irhuleni in the anti-Assyrian coalition with Ahab) before
+  writing it into the Hamathite entry; dictSource is "study-bible (ACAI + Tyndale)"
+  throughout this batch, not an ISBE citation. Most of this batch is minor gentilic
+  epithets (David's mighty men, wilderness-census clan names, "resident of X" tags
+  applied to a single named individual), so entries are short, 1-3 sentences. One
+  multi-sense catch this run: "Hezronites" (H2697, Num. 26:6 and 26:21) is not one clan
+  but two distinct clans that happen to share the same demonym, descended from two
+  different men named Hezron (a son of Reuben, and a separate grandson of Judah through
+  Perez who is also an ancestor in David's own genealogical line); the record was
+  rewritten to cover both. No source-data misspellings (the Azorigin/Onespiphorus/
+  Dinhaban/Adronicus/Nakbi/Asharoth pattern from earlier runs) turned up in this batch.
+  Path note for future runs: no jayms-post-build skill directory exists in this
+  environment, so these notes go in NOTES.md at the repo root, as prior runs have done.
+
 - 2026-09-19: thirteenth and final place-tier batch (all 64 remaining not-yet-rewritten
   place records, all single-canonical-ref); the place tier is now fully complete, 0
   not-yet-rewritten place records left, so the pool moves entirely to kind=="group"
