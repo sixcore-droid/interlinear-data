@@ -1,5 +1,31 @@
 # Saved-up questions
 
+- 2026-09-19: thirteenth and final place-tier batch (all 64 remaining not-yet-rewritten
+  place records, all single-canonical-ref); the place tier is now fully complete, 0
+  not-yet-rewritten place records left, so the pool moves entirely to kind=="group"
+  next run (187 remaining), with kind=="unknown" (10 remaining) after that. ISBE
+  (internationalstandardbible.com) is still blocked via curl and WebFetch in this
+  environment (agent-proxy status confirms a 403 policy denial on the CONNECT to that
+  host), consistent with every prior run, so this batch again used general knowledge,
+  dictSource "study-bible (ACAI + Tyndale)" throughout; WebSearch was not blocked and
+  was used to verify several facts before writing them rather than assume them (the
+  Migdal Stone and the 2009/2016 first-century synagogue excavations at Magdala, James
+  Pritchard's 1970s excavation of Zarephath/Sarepta confirming the site by an inscribed
+  seal and uncovering over twenty pottery kilns, the Mesha Stele's own claim to have
+  rebuilt Kiriathaim, the still-unlocated site of Akkad despite over a century of
+  search, the Tel Dan Stele found at the site of Laish/Leshem/Dan, Tiglath-pileser
+  III's annals recording the annexation of Abel-beth-maachah near Beth-maachah,
+  Sennacherib's own annals naming Mahalliba (matching Ahlab) among the Phoenician
+  towns that submitted in his 701 BC campaign, and the Lydian-Aramaic "Sparda"
+  inscription from Sardis relevant to Sepharad). One data-quality issue handled in the
+  dictNote text rather than corrected in the data: "Gibeah" (strong H1388) carries
+  kind=="place" but its only canonical reference, 1 Chronicles 2:49, is a Judahite
+  Calebite genealogical entry naming a clan/settlement called Gibea, not the far
+  better-known Gibeah of Benjamin (Saul's hometown); the new dictNote explains this
+  distinction rather than writing a biography of the wrong Gibeah, same pattern as the
+  recurring genealogical place-name notes in earlier batches. This file lives at the
+  repo root because no jayms-post-build skill path exists in this container.
+
 - 2026-09-19: twelfth place-tier batch (50 entities, pool entirely single-canonical-ref
   since the tenth batch; 64 not-yet-rewritten place records remain). ISBE
   (internationalstandardbible.com) is still blocked via curl and WebFetch in this
