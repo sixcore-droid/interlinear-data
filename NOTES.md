@@ -1,5 +1,17 @@
 # Saved-up questions
 
+- 2026-09-20 (later run): started detached again at ffd3f70 with local `main` showing
+  17d81f6, which looked at first like the same recurring bug. This time `git fetch
+  origin main` before touching anything showed origin/main was actually already at
+  ffd3f70, i.e. the previous run's push had landed fine; the "stale" local `main` was
+  just this fresh container's cached ref from before that push, not a missed push. Ran
+  `git checkout -B main HEAD` to attach main to the current tip (fast-forward, no new
+  push needed since origin already matched). Lesson for future runs: always `git fetch
+  origin main` first and compare against the freshly-fetched origin/main, not the
+  container's pre-fetch local ref, before concluding a push was lost. Also
+  re-confirmed the full rewrite (person/place/group) is still complete; no content
+  batch was done this run.
+
 - 2026-09-20: the detached-HEAD bug documented just below recurred on the very commit
   that documented it. This session started detached again at 4fcd5b5 (one commit ahead
   of local/origin main at 17d81f6), confirming the root cause is environmental: every
