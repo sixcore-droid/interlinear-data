@@ -1,5 +1,33 @@
 # Saved-up questions
 
+- 2026-09-20: the detached-HEAD bug documented just below recurred on the very commit
+  that documented it. This session started detached again at 4fcd5b5 (one commit ahead
+  of local/origin main at 17d81f6), confirming the root cause is environmental: every
+  fresh session/container starts on a detached HEAD regardless of what branch state the
+  prior session left behind, not a one-off mistake in a single run. Recovered by
+  `git checkout -B main HEAD` (fast-forward, main was a clean ancestor) and pushed;
+  `git ls-remote origin main` confirmed origin/main landed on 4fcd5b5. This means
+  jayms.com had been serving the pre-2026-09-18 dataset (missing the entire place-tier
+  and group-tier rewrite, 42 commits) for roughly 30-54 hours longer than the previous
+  run's fix note assumed, since that fix's own commit never actually reached origin.
+  Every future run MUST do this exact sequence before any other git command: check
+  `git symbolic-ref -q HEAD` (if it fails/prints nothing, HEAD is detached), run
+  `git checkout -B main HEAD` regardless to guarantee a real branch pointed at the
+  current tip, and after `git push origin main` verify with
+  `git ls-remote origin main` (or `git rev-parse HEAD origin/main`) that the remote SHA
+  actually matches, not just that push exited 0. Do this check-and-fix at the very start
+  of the run, before reading entities.json, since a stale push means nothing else in the
+  run matters.
+
+- 2026-09-20: at the start of this run, confirmed (after the recovery above) that the
+  full rewrite is complete: kind=="person" (2007 non-curated), kind=="place" (759
+  non-curated), and kind=="group" (192 non-curated) all have dictSource starting with
+  "study-bible", "Tyndale", or "International Standard Bible Encyclopedia" already, zero
+  not-yet-rewritten records left in any of the three tiers. Per the run instructions, no
+  new content batch was done this run. Note: kind=="unknown" (18 non-curated, 10 not yet
+  rewritten) was never in scope for this project and is untouched; the run instructions
+  only ever named person/place/group, so leaving it as-is.
+
 - 2026-09-19 (later, ~19:30 run): found that every run since 2026-09-18 06:21 (15
   scheduled firings, 41 commits, the full place-tier and group-tier rewrite) had been
   committing successfully in this working directory but landing on a DETACHED HEAD
