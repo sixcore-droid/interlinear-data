@@ -417,3 +417,26 @@ did not exist in this environment as of 2026-09-18.)
   in Zebulun (Josh. 11:1-2, 19:15) and, unrelated in origin, a son of Issachar who named
   the Shimronite clan (Gen. 46:13; Num. 26:24; 1 Chr. 7:1). Both were rewritten to cover
   both senses.
+- 2026-09-21: root-caused the recurring "detached HEAD" scare (documented in the 5 prior
+  runs' commits from 2026-09-19 through today). Confirmed with a fresh `git fetch origin
+  main`: origin/main was NEVER behind. Every affected run started in a container whose
+  local `refs/remotes/origin/main` and local `main` branch pointer were stale snapshots
+  from before the previous run's push (the container's git state isn't refreshed after
+  a push lands), so `git branch -a -v` / `git log origin/main` without fetching first
+  understates origin's true tip and looks like lost work. `git fetch origin main` always
+  shows the real state. This run confirmed origin/main == the detached HEAD tip (14c923e)
+  with nothing lost, same as every prior "false alarm" run claimed, so all 46 commits
+  since 17d81f6 (full place-tier and group-tier completion) are live on production.
+  Future runs: `git fetch origin main` once at session start, then `git checkout -B main
+  origin/main` before doing anything else, and treat that as settled, no need to re-verify
+  or write another NOTES.md entry about it unless `git fetch` itself reports an actual
+  divergence (origin/main NOT an ancestor of local HEAD after fetching).
+  Also: as of this run, kind=="person"/"place"/"group" (curated==false) are all fully
+  rewritten (0 not-yet-rewritten records in each), so per this routine's own completion
+  condition, the batch rewrite is done. kind=="unknown" has 18 records total, of which
+  10 are still not-yet-rewritten (God, Shadrach, Belteshazzar, Sheshbazzar, Chaldean,
+  Jeshua, Shealtiel, Middin, Eloi, Persian; the other 8, Darius, Israel, Belshazzar,
+  Persia, Moses, Zerubbabel, Nethinims, Adar, are already rewritten), but this routine's
+  step 1 explicitly does not put kind=="unknown" in scope (it only names
+  person/place/group). Whoever owns this routine should either retire it or extend
+  step 1 to include kind=="unknown" if those are meant to be rewritten too.
