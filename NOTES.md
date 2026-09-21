@@ -1,5 +1,16 @@
 # Saved-up questions
 
+- 2026-09-21: another instance of the recurring detached-HEAD false-alarm pattern.
+  Session started detached at 053ddf4 with a stale cached `origin/main` briefly
+  showing 17d81f6 (44 commits behind) before an explicit `git fetch origin main`
+  updated it to 053ddf4, exactly matching HEAD, i.e. no push was actually lost this
+  time, just the same pre-fetch-cache illusion the 2026-09-20 note already
+  diagnosed. Ran `git checkout -B main HEAD` to attach `main` (fast-forward, already
+  up to date with origin). Re-confirmed person/place/group rewrite is still complete
+  (0 not-yet-rewritten in all three; kind=="unknown" still has 10 out-of-scope
+  stragglers, unchanged). No content batch this run per the task's own instructions
+  for the fully-complete case.
+
 - 2026-09-20 (later run): started detached again at ffd3f70 with local `main` showing
   17d81f6, which looked at first like the same recurring bug. This time `git fetch
   origin main` before touching anything showed origin/main was actually already at
